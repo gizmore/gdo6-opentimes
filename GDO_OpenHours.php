@@ -23,15 +23,15 @@ class GDO_OpenHours extends GDO_String
         $oh->isOpen($time);
     }
     
-    public function initJSON()
-    {
-        return $this->getValue();
-    }
+//     public function initJSON()
+//     {
+//         return $this->getValue();
+//     }
     
-    public function getValue()
-    {
-        return new OpenHours($this->getValue());
-    }
+//     public function getValue()
+//     {
+//         return new OpenHours($this->getValue());
+//     }
     
     public function validate($value)
     {
