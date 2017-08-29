@@ -1,9 +1,9 @@
 <?php
 namespace GDO\OpenTimes;
 
-use GDO\Form\GDO_Enum;
+use GDO\Form\GDT_Enum;
 
-final class GDO_OpenHour extends GDO_Enum
+final class GDT_OpenHour extends GDT_Enum
 {
     public $editable = false;
     

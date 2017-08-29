@@ -1,10 +1,10 @@
 <?php
 namespace GDO\OpenTimes;
 
-use GDO\Template\GDO_Template;
-use GDO\Type\GDO_String;
+use GDO\Template\GDT_Template;
+use GDO\Type\GDT_String;
 
-class GDO_OpenHours extends GDO_String
+class GDT_OpenHours extends GDT_String
 {
     public function defaultLabel() { return $this->label('open_times'); }
     
@@ -13,7 +13,7 @@ class GDO_OpenHours extends GDO_String
 
     public function render()
     {
-        return GDO_Template::php('OpenTimes', 'form/open_hours.php', ['field' => $this]);
+        return GDT_Template::php('OpenTimes', 'form/open_hours.php', ['field' => $this]);
     }
     
     public function isOpen(int $time=null)

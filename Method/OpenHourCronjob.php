@@ -3,7 +3,7 @@ namespace GDO\OpenTimes\Method;
 
 use GDO\Cronjob\MethodCronjob;
 use GDO\DB\GDO;
-use GDO\OpenTimes\GDO_OpenHour;
+use GDO\OpenTimes\GDT_OpenHour;
 use GDO\OpenTimes\OpenHours;
 use ReflectionClass;
 /**
@@ -35,14 +35,14 @@ final class OpenHourCronjob extends MethodCronjob
     {
         foreach ($table->gdoColumnsCache() as $gdoType)
         {
-            if ($gdoType instanceof GDO_OpenHour)
+            if ($gdoType instanceof GDT_OpenHour)
             {
                 $this->runForColumn($table, $gdoType);
             }
         }
     }
     
-    private function runForColumn(GDO $table, GDO_OpenHour $column)
+    private function runForColumn(GDO $table, GDT_OpenHour $column)
     {
         $result = $table->select()->exec();
         while ($gdo = $table->fetch($result))

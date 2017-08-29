@@ -1,7 +1,7 @@
 <?php
-use GDO\OpenTimes\GDO_OpenHour;
+use GDO\OpenTimes\GDT_OpenHour;
 
-$field instanceof GDO_OpenHour;
+$field instanceof GDT_OpenHour;
 ?>
 <?php
 switch ($field->getValue())
