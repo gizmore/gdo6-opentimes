@@ -1,9 +1,9 @@
 <?php
 namespace GDO\OpenTimes;
 
-use GDO\Core\Module;
+use GDO\Core\GDO_Module;
 
-final class Module_OpenTimes extends Module
+final class Module_OpenTimes extends GDO_Module
 {
     public $module_priority = 20;
     public function onLoadLanguage() { $this->loadLanguage('lang/open_times'); }
