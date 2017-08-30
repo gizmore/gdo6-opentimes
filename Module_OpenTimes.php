@@ -11,6 +11,9 @@ final class Module_OpenTimes extends GDO_Module
     public function onIncludeScripts()
     {
         $this->addJavascript('bower_components/opening_hours/opening_hours.js');
-        $this->addJavascript('js/gwf-open-hours-ctrl.js');
+        if (module_enabled('GWFAngular'))
+        {
+            $this->addJavascript('js/gwf-open-hours-ctrl.js');
+        }
     }
 }
