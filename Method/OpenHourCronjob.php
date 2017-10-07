@@ -2,7 +2,7 @@
 namespace GDO\OpenTimes\Method;
 
 use GDO\Cronjob\MethodCronjob;
-use GDO\DB\GDO;
+use GDO\Core\GDO;
 use GDO\OpenTimes\GDT_OpenHour;
 use GDO\OpenTimes\OpenHours;
 use ReflectionClass;
