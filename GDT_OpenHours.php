@@ -1,8 +1,8 @@
 <?php
 namespace GDO\OpenTimes;
 
-use GDO\Template\GDT_Template;
-use GDO\Type\GDT_String;
+use GDO\Core\GDT_Template;
+use GDO\DB\GDT_String;
 
 class GDT_OpenHours extends GDT_String
 {
@@ -16,7 +16,7 @@ class GDT_OpenHours extends GDT_String
         return GDT_Template::php('OpenTimes', 'form/open_hours.php', ['field' => $this]);
     }
     
-    public function isOpen(int $time=null)
+    public function isOpen($time=null)
     {
         $time = $time === null ? time() : $time;
         $oh = $this->getValue();

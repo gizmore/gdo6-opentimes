@@ -1,7 +1,7 @@
 <?php
 namespace GDO\OpenTimes\Method;
 
-use GDO\Cronjob\MethodCronjob;
+use GDO\Core\MethodCronjob;
 use GDO\Core\GDO;
 use GDO\OpenTimes\GDT_OpenHour;
 use GDO\OpenTimes\OpenHours;

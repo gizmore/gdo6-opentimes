@@ -1,7 +1,7 @@
 <?php
 namespace GDO\OpenTimes;
 
-use GDO\Form\GDT_Enum;
+use GDO\DB\GDT_Enum;
 
 final class GDT_OpenHour extends GDT_Enum
 {
@@ -13,7 +13,7 @@ final class GDT_OpenHour extends GDT_Enum
     }
     
     public $hoursColumn;
-    public function hoursColumn(string $columnName)
+    public function hoursColumn($columnName)
     {
         $this->hoursColumn = $columnName;
         return $this;
