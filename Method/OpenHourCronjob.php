@@ -16,7 +16,7 @@ final class OpenHourCronjob extends MethodCronjob
     {
         foreach (get_declared_classes() as $className)
         {
-            if (is_subclass_of($className, 'GDO\\DB\\GDO'))
+            if (is_subclass_of($className, 'GDO\\Core\\GDO'))
             {
                 $class = new ReflectionClass($className);
                 if (!$class->isAbstract())
