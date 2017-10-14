@@ -19,6 +19,6 @@ $field instanceof GDT_OpenHours;
    value="<?= $field->displayVar(); ?>"
    <?= $field->htmlRequired(); ?>
    <?= $field->htmlPattern(); ?>
-   <?= $field->htmlDisabled(); ?>/>
-  <div class="gdo-form-error"><?= $field->error; ?></div>
+   <?= $field->htmlDisabled(); ?> />
+  <?= $field->htmlError(); ?>
 </md-input-container>
