@@ -7,6 +7,8 @@ controller('GDOOpenHoursCtrl', function GDOOpenHoursCtrl($scope, $mdDialog) {
 	
 	$scope.initJSON = function(json) {
 		console.log('GDOOpenHoursCtrl.initJSON()', json);
+		$scope.data.config = json;
+		$scope.data.openHours = json.val;
 	};
 	
 	$scope.confirmHours = function() {
@@ -23,10 +25,10 @@ controller('GDOOpenHoursCtrl', function GDOOpenHoursCtrl($scope, $mdDialog) {
 		console.log('GDOOpenHoursCtrl.openHoursDialog()')
 		$mdDialog.show({
 			templateUrl: 'GDO/OpenTimes/js/open-hours.html',
-//			locals: {
-//				initPosition: initPosition,
-//				text: text,
-//			},
+			locals: {
+				rules: $scope.data.openHours.split(';'),
+				openHours: $scope.data.openHours,
+			},
 			clickOutsideToClose: true,
 			controller: GDOOpenHoursCtrl,
 			parent: angular.element(window.document.body),

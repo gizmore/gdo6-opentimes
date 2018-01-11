@@ -11,7 +11,7 @@ class GDT_OpenHours extends GDT_String
     public $editable = true;
     public $writable = true;
 
-    public function render()
+    public function renderForm()
     {
         return GDT_Template::php('OpenTimes', 'form/open_hours.php', ['field' => $this]);
     }
