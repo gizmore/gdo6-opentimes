@@ -6,7 +6,7 @@ $field instanceof GDT_OpenHour;
 <?php
 switch ($field->getValue())
 {
-    case 'open': echo t('enum_open'); break;
-    case 'closed': echo t('enum_open'); break;
-    case 'unknown': echo t('enum_unknown'); break;
+	case 'open': echo t('enum_open'); break;
+	case 'closed': echo t('enum_open'); break;
+	case 'unknown': echo t('enum_unknown'); break;
 }
