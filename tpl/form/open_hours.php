@@ -9,7 +9,7 @@ $field instanceof GDT_OpenHours;
  ng-controller="GDOOpenHoursCtrl"
  ng-init='initJSON(<?=json_encode($field->configJSON()); ?>)'>
 
-  <label for="form[<?= $field->name; ?>]"><?= $field->label; ?></label>
+  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <?= GDT_Icon::iconS('schedule'); ?>
 <!--   <input type="text" ng-model="data.openHours.display" nag-click="openHoursDialog($event)" /> -->
 
