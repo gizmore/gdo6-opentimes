@@ -36,7 +36,7 @@ class OpenHours
 	 *
 	 * @param string $value An opening_hours value
 	 *
-	 * @return Services_OpenStreetMap_OpeningHours
+	 * @return self
 	 */
 	public function setValue($value)
 	{
