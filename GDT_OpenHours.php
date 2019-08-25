@@ -10,6 +10,7 @@ class GDT_OpenHours extends GDT_String
 	
 	public $editable = true;
 	public $writable = true;
+	public $icon = 'time';
 
 	public function renderForm()
 	{
