@@ -1,5 +1,7 @@
 <?php
 namespace GDO\OpenTimes;
+
+use GDO\Core\Application;
 /**
  * Services_OpenStreetMap_OpeningHours
  *
@@ -64,7 +66,7 @@ class OpenHours
 		}
 		
 		if ($time === null) {
-			$time = time();
+		    $time = Application::$TIME;
 		}
 		if ($this->value === 'sunrise-sunset') {
 			$start = $this->_startTime(date_sunrise($time));
@@ -113,7 +115,7 @@ class OpenHours
 	private function _openTimeSpec($portions, $time)
 	{
 		if ($time === null) {
-			$time = time();
+		    $time = Application::$TIME;
 		}
 		
 		$day = strtolower(substr(date('D', $time), 0, 2));

@@ -1,6 +1,7 @@
 <?php
 namespace GDO\OpenTimes;
 
+use GDO\Core\Application;
 use GDO\Core\GDT_Template;
 use GDO\DB\GDT_String;
 
@@ -19,7 +20,7 @@ class GDT_OpenHours extends GDT_String
 	
 	public function isOpen($time=null)
 	{
-		$time = $time === null ? time() : $time;
+	    $time = $time === null ? Application::$TIME : $time;
 		$oh = $this->getValue();
 		$oh->isOpen($time);
 	}
