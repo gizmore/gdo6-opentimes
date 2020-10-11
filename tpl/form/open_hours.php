@@ -4,7 +4,6 @@ use GDO\UI\GDT_Icon;
 $field instanceof GDT_OpenHours;
 ?>
 <div class="gdo-container<?= $field->classError(); ?>">
-  <?=$field->htmlTooltip()?>
   <?= $field->htmlIcon(); ?>
   <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
   <textarea
