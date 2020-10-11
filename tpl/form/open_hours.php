@@ -1,14 +1,14 @@
 <?php
 use GDO\OpenTimes\GDT_OpenHours;
-use GDO\UI\GDT_Icon;
-$field instanceof GDT_OpenHours;
+/** @var $field GDT_OpenHours **/
 ?>
 <div class="gdo-container<?= $field->classError(); ?>">
   <?= $field->htmlIcon(); ?>
-  <label for="form[<?= $field->name; ?>]"><?= $field->displayLabel(); ?></label>
+  <label <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <textarea
-   name="form[<?=$field->name?>]"
+   <?=$field->htmlID()?>
+   <?=$field->htmlFormName()?>
    <?=$field->htmlRequired()?>
-   <?=$field->htmlDisabled()?> /><?=$field->displayVar()?></textarea>
+   <?=$field->htmlDisabled()?>><?=$field->displayVar()?></textarea>
   <?= $field->htmlError(); ?>
 </div>
