@@ -7,7 +7,7 @@ final class GDT_OpenHour extends GDT_Enum
 {
 	public $editable = false;
 	
-	public function __construct()
+	protected function __construct()
 	{
 		$this->enumValues('open', 'closed', 'unknown');
 	}
