@@ -23,7 +23,10 @@ final class OpenHourCronjob extends MethodCronjob
 				{
 					if ($table = GDO::tableFor($className))
 					{
-						$this->runForGDO($table);
+					    if (!$table->gdoAbstract())
+					    {
+					        $this->runForGDO($table);
+					    }
 					}
 				}
 			}
