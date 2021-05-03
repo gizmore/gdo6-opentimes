@@ -15,6 +15,7 @@ use GDO\Core\Application;
 final class Module_OpenTimes extends GDO_Module
 {
 	public $module_priority = 20;
+	public $module_license = "BSD";
 	public function onLoadLanguage() { $this->loadLanguage('lang/open_times'); }
 	
 	public function onIncludeScripts()
