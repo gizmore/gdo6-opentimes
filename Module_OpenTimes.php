@@ -25,10 +25,10 @@ final class Module_OpenTimes extends GDO_Module
 		    if (Module_Angular::instance()->cfgIncludeScripts() ||
 		        Application::instance()->hasTheme('material'))
 		    {
-    			$this->addJavascript('js/gwf-open-hours-ctrl.js');
+    			$this->addJS('js/gwf-open-hours-ctrl.js');
 		    }
 		}
-		$this->addJavascript('bower_components/opening_hours/opening_hours.js');
+		$this->addJS('bower_components/opening_hours/opening_hours.js');
 	}
 
 }
