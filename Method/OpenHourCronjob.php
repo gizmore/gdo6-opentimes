@@ -35,11 +35,11 @@ final class OpenHourCronjob extends MethodCronjob
 	
 	private function runForGDO(GDO $table)
 	{
-		foreach ($table->gdoColumnsCache() as $gdoType)
+		foreach ($table->gdoColumnsCache() as $gdt)
 		{
-			if ($gdoType instanceof GDT_OpenHour)
+			if ($gdt instanceof GDT_OpenHour)
 			{
-				$this->runForColumn($table, $gdoType);
+				$this->runForColumn($table, $gdt);
 			}
 		}
 	}
